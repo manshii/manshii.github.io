@@ -15,6 +15,7 @@
       href="https://fonts.googleapis.com/css2?family=Zhi+Mang+Xing&display=swap"
       rel="stylesheet"
     />
+
     <style>
       * {
         margin: 0;
@@ -74,7 +75,17 @@
         z-index: 1;
         font-size: 3rem;
         user-select: none;
+        animation: hade-1 5s;
       }
+      @keyframes hade-1 {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
       #welcome-section > h2 {
         position: absolute;
         top: 50%;
@@ -84,6 +95,18 @@
         z-index: 1;
         font-size: 1rem;
         user-select: none;
+        animation: hade-2 8s;
+      }
+      @keyframes hade-2 {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
       }
 
       #svgFilter {
@@ -138,8 +161,11 @@
       #profile-content > h2 {
         font-size: 3rem;
         margin-top: 6rem;
-
         user-select: none;
+      }
+      #profile-content > h2:hover {
+        color: red;
+        transform: translateY(4px);
       }
       .skills {
         display: flex;
@@ -186,6 +212,10 @@
         font-size: 3rem;
         margin: 6rem 0;
         user-select: none;
+      }
+      #projects > h2:hover {
+        color: red;
+        transform: translateY(4px);
       }
 
       .project-img {
@@ -677,7 +707,7 @@
     </nav>
 
     <section id="welcome-section">
-      <h1>你好！</h1>
+      <h1>你好!</h1>
       <h2>我是一名web开发人员.</h2>
 
       <div>
@@ -872,3 +902,4 @@
     </footer>
   </body>
 </html>
+
