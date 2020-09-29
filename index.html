@@ -25,7 +25,25 @@
       :root {
         --primaryHeaderColor: rgb(255, 0, 0);
       }
+      #up {
+        display: none;
+        position: fixed;
+        top: 80%;
+        left: 94%;
+        z-index: 5;
+        border: 5px solid #151515;
+        border-radius: 10%;
+        background-color: #151515;
+      }
+      #up > i {
+        padding: 1px;
+        font-size: 20px;
+        color: white;
+      }
 
+      #up:hover {
+        transform: translateY(2px);
+      }
       #navbar {
         display: flex;
         flex-direction: coloum;
@@ -48,7 +66,7 @@
 
       .navbar-link {
         color: #bdbdbd;
-        font-size: 2rem;
+        font-size: 25px;
         font-weight: bold;
         padding: 0 10px;
         padding-top: 4px;
@@ -80,7 +98,8 @@
       @keyframes hade-1 {
         0% {
           opacity: 0;
-        }20%{
+        }
+        20% {
           opacity: 0;
         }
         100% {
@@ -130,7 +149,7 @@
 
       .line {
         width: 100%;
-        height: 0.5vh;
+        height: 0.3vh;
         background-color: #00dbde;
         background-image: linear-gradient(45deg, #00dbde 0%, #fc00ff 100%);
       }
@@ -203,6 +222,19 @@
         width: 100vw;
         margin: 4rem 0;
       }
+      .project-tile {
+        padding: 1rem 0;
+        margin: 1rem 0;
+        border: 1px solid #e6e6e6;
+
+        border-top: 4px solid #151515;
+      }
+      .project-tile:hover {
+        border-top: 5px solid;
+        border-image: linear-gradient(45deg, #00dbde 0%, #fc00ff 100%) 20 20;
+
+        transform: scale(1.1);
+      }
       #projects > div {
         display: flex;
         flex-direction: row;
@@ -213,6 +245,7 @@
       #projects > h2 {
         font-size: 3rem;
         margin: 6rem 0;
+        text-shadow: 5px 5px 5px #bdbdbd;
         user-select: none;
       }
       #projects > h2:hover {
@@ -234,8 +267,9 @@
         border-radius: 50%;
       }
       .project-link > a:hover {
-        background: #151515;
-        color: #ff0000;
+        background-color: black;
+        color: red;
+        border: 1px solid #8181f7;
       }
       .project-link > a > i:hover {
         transform: translateY(4px);
@@ -261,7 +295,7 @@
       }
       .footer-link > i {
         color: #bdbdbd;
-        font-size: 1rem;
+        font-size: 20px;
         margin: 1rem 0rem;
         padding: 0 1rem;
       }
@@ -311,7 +345,7 @@
         transform: translate(0, -100%);
         -webkit-transform: translate(0, -100%);
       }
-
+      #up > i:hover,
       .navbar-link:hover,
       .logo > i:hover {
         color: #642efe;
@@ -362,6 +396,18 @@
         }
       }
     </style>
+    <script>
+      window.onscroll = function () {
+        if (
+          document.documentElement.scrollTop + document.body.scrollTop >
+          100
+        ) {
+          document.getElementById("up").style.display = "block";
+        } else {
+          document.getElementById("up").style.display = "none";
+        }
+      };
+    </script>
     <script>
       //check if script is loaded.
       console.log("initialized");
@@ -707,7 +753,10 @@
       </ul>
       <div class="line"></div>
     </nav>
-
+    <a href="#welcome-section"
+      ><button id="up">
+        <i class="fas fa-sort-up"></i></button
+    ></a>
     <section id="welcome-section">
       <h1>你好!</h1>
       <h2>我是一名web开发人员.</h2>
