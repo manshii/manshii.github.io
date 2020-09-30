@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primaryHeaderColor: rgb(255, 0, 0);
+}
+#up {
+  display: none;
+  position: fixed;
+  top: 80%;
+  left: 94%;
+  z-index: 5;
+  border: 5px solid #151515;
+  border-radius: 10%;
+  background-color: #151515;
+}
+#up > i {
+  padding: 1px;
+  font-size: 20px;
+  color: white;
+}
+
+#up:hover {
+  transform: translateY(2px);
+}
+#navbar {
+  display: flex;
+  flex-direction: coloum;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  background-color: #151515;
+}
+
+#navbar > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.navbar-link {
+  color: #bdbdbd;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 0 10px;
+  padding-top: 4px;
+  margin: 0 3rem;
+  text-decoration: none;
+}
+.navbar-link:hover {
+  border-top: 3px solid;
+  border-image: linear-gradient(45deg, #f7819f, #81bef7) 20 20;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+#welcome-section > h1 {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  right: 35%;
+  bottom: 60%;
+  z-index: 1;
+  font-size: 3rem;
+  user-select: none;
+  animation: hade-1 5s;
+}
+@keyframes hade-1 {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#welcome-section > h2 {
+  position: absolute;
+  top: 50%;
+  left: 43%;
+  right: 35%;
+  bottom: 60%;
+  z-index: 1;
+  font-size: 1rem;
+  user-select: none;
+  animation: hade-2 8s;
+}
+@keyframes hade-2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+#svgFilter {
+  width: 95vw;
+  height: auto;
+  margin-top: 15%; /* */
+}
+#mainstage {
+  width: 95vw;
+  height: 100vh;
+  overflow: hidden;
+  margin-top: 15%; /* */
+  padding: 0px;
+  background-color: white;
+  /* filter: blur(5px) url(#svgFilter); */
+  transform: scale(1.1);
+}
+.line {
+  width: 100%;
+  height: 0.3vh;
+  background-color: #00dbde;
+  background-image: linear-gradient(45deg, #00dbde 0%, #fc00ff 100%);
+}
+#line_2,
+#line_3 {
+  background-color: #ffffff;
+  background-image: linear-gradient(
+    45deg,
+    #ff0000 0%,
+    #6284ff 50%,
+    #ffffff 100%
+  );
+  position: relative;
+  z-index: 4;
+}
+#profile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  position: relative;
+  z-index: 3;
+  width: 100vw;
+  background-color: #00dbde;
+  background-image: linear-gradient(45deg, #00dbde 0%, #fc00ff 100%);
+}
+#profile-content > h2 {
+  font-size: 3rem;
+  margin-top: 6rem;
+  user-select: none;
+}
+#profile-content > h2:hover {
+  color: red;
+  transform: translateY(4px);
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem;
+  padding: 1rem;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2rem;
+  font-size: 2rem;
+}
+.logo > i {
+  font-size: 4rem;
+}
+.logo > p {
+  user-select: none;
+}
+#projects {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  margin: 4rem 0;
+}
+.project-tile {
+  padding: 1rem 0;
+  margin: 2rem 2rem 3rem 2rem;
+  border: 1px solid #e6e6e6;
+
+  border-top: 4px solid #151515;
+}
+.project-tile:hover {
+  border-top: 5px solid;
+  border-image: linear-gradient(45deg, #00dbde 0%, #fc00ff 100%) 20 20;
+
+  transform: scale(1.1);
+}
+#projects > div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#projects > h2 {
+  font-size: 3rem;
+  margin: 6rem 0;
+  text-shadow: 5px 5px 5px #bdbdbd;
+  user-select: none;
+}
+#projects > h2:hover {
+  color: red;
+  transform: translateY(4px);
+}
+.project-img {
+  height: 20rem;
+  width: 30rem;
+}
+.project-link {
+  padding-bottom: 1rem;
+}
+.project-link > a {
+  background-color: white;
+  color: black;
+  font-size: 2rem;
+  padding: 10px;
+  margin: 2rem 4rem;
+  border: 1px solid #151515;
+  border-radius: 50%;
+}
+.project-link > a:hover {
+  background-color: black;
+  color: red;
+  border: 1px solid #8181f7;
+}
+.project-link > a > i:hover {
+  transform: translateY(4px);
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  width: 100vw;
+}
+footer > nav > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.footer-link {
+  display: flex;
+  text-decoration: none;
+}
+.footer-link > i {
+  color: #bdbdbd;
+  font-size: 20px;
+  margin: 1rem 0rem;
+  padding: 0 1rem;
+}
+.footer-link > i:hover {
+  color: #642efe;
+}
+.slide {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 2rem;
+}
+.slide img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.slide-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  background-color: rgba(21, 21, 21, 0.5);
+  color: #fff;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+  -webkit-transition: transform 0.3s ease;
+}
+.slide:hover .slide-content {
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+}
+
+.slide-top .slide-content {
+  transform: translate(0, -100%);
+  -webkit-transform: translate(0, -100%);
+}
+#up > i:hover,
+.navbar-link:hover,
+.logo > i:hover {
+  color: #642efe;
+}
+
+@media screen and (max-width: 768px) {
+  #welcome-section > h1 {
+    left: 46%;
+    right: 40%;
+    font-size: 18px;
+  }
+
+  .navbar-link {
+    font-size: 1rem;
+  }
+  .logo {
+    margin: 1rem;
+    font-size: 1rem;
+  }
+  .logo > i {
+    font-size: 3rem;
+  }
+  .line {
+    height: 4px;
+  }
+  #profile-content > h2 {
+    font-size: 2rem;
+  }
+  #projects > h2 {
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+  .project-img {
+    height: 8rem;
+    width: 12rem;
+  }
+  .project-link > a {
+    background-color: white;
+    color: black;
+    font-size: 1rem;
+    padding: 10px;
+    margin: 2rem 1rem;
+    border: 1px solid #151515;
+    border-radius: 50%;
+  }
+  .slide-content {
+    font-size: 1rem;
+  }
+}
