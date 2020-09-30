@@ -129,13 +129,11 @@
           opacity: 1;
         }
       }
-
       #svgFilter {
         width: 95vw;
         height: auto;
         margin-top: 15%; /* */
       }
-
       #mainstage {
         width: 95vw;
         height: 100vh;
@@ -146,7 +144,6 @@
         /* filter: blur(5px) url(#svgFilter); */
         transform: scale(1.1);
       }
-
       .line {
         width: 100%;
         height: 0.3vh;
@@ -165,7 +162,6 @@
         position: relative;
         z-index: 4;
       }
-
       #profile-content {
         display: flex;
         flex-direction: column;
@@ -178,7 +174,6 @@
         background-color: #00dbde;
         background-image: linear-gradient(45deg, #00dbde 0%, #fc00ff 100%);
       }
-
       #profile-content > h2 {
         font-size: 3rem;
         margin-top: 6rem;
@@ -192,7 +187,6 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-
         margin: 1rem;
         padding: 1rem;
       }
@@ -200,7 +194,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-
         flex-wrap: wrap;
         margin: 2rem;
         font-size: 2rem;
@@ -211,7 +204,6 @@
       .logo > p {
         user-select: none;
       }
-
       #projects {
         display: flex;
         flex-direction: column;
@@ -224,7 +216,7 @@
       }
       .project-tile {
         padding: 1rem 0;
-        margin: 1rem 0;
+        margin: 2rem 2rem 3rem 2rem;
         border: 1px solid #e6e6e6;
 
         border-top: 4px solid #151515;
@@ -252,10 +244,12 @@
         color: red;
         transform: translateY(4px);
       }
-
       .project-img {
         height: 20rem;
         width: 30rem;
+      }
+      .project-link {
+        padding-bottom: 1rem;
       }
       .project-link > a {
         background-color: white;
@@ -274,7 +268,6 @@
       .project-link > a > i:hover {
         transform: translateY(4px);
       }
-
       footer {
         display: flex;
         flex-direction: column;
@@ -283,7 +276,6 @@
         background-color: #151515;
         width: 100vw;
       }
-
       footer > nav > ul {
         display: flex;
         flex-direction: row;
@@ -299,11 +291,9 @@
         margin: 1rem 0rem;
         padding: 0 1rem;
       }
-
       .footer-link > i:hover {
         color: #642efe;
       }
-
       .slide {
         position: relative;
         display: inline-block;
